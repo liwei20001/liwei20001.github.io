@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>https://liwei20001.github.io/post/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Mar 2020 19:17:37 +0800</lastBuildDate>
+    
+	<atom:link href="https://liwei20001.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test</title>
+      <link>https://liwei20001.github.io/post/test/</link>
+      <pubDate>Mon, 09 Mar 2020 19:17:37 +0800</pubDate>
+      
+      <guid>https://liwei20001.github.io/post/test/</guid>
+      <description>opencv-python 图像初阶 imread(filename, parameter) parameter=1,加载彩色图像, parameter=0,加载灰度图像
+imshow(window_name, img) 显示图像
+nameWindow(window_name, cv2.WINDOW_NORMAL) 新建一个窗口, cv2.WINDOW_NORMAL: 窗口可调节, 默认不可调节
+plt.imshow(img) 在matplot中显示图像, matplotlib的图像通道为RGB而opencv的图像通道为BGR
+视频入门 从相机捕获视频 cap = cv2.Videocapture(0) 调用摄像头,并创建摄像头对象
+key = cv2.waitKey(0) &amp;amp; 0xff 按键检测, 返回一个int类型数据, &amp;lsquo;27&#39;为ESC, ord(&amp;lsquo;q&amp;rsquo;) 检测按键q
+cap.release() 程序结束后,释放摄像头
+cap.get(3)# 宽度 cap.get(4) #高度 cap.get(5) # 视频的帧率 读取相机的相关数据 cv2.destroyAllWindows() 关闭所有创建的窗口
+cv2.destroyWindow(window_name) # 关闭指定的窗口
+保存相机捕获视频 # 创建windows编译解码器并创建VideoWriter对象 fourcc = cv2.VideoWriter_fourcc(*&amp;#39;XVID&amp;#39;) out = cv2.VideoWriter(&amp;#39;output.avi&amp;#39;, fourcc, fps(float), (width, height)) # 逐帧将图片写入out中 out.write(frame) out.release() # 释放文件资源 opencv 绘图功能 基本画图 cv2.</description>
+    </item>
+    
+  </channel>
+</rss>
