@@ -6,9 +6,19 @@
     <description>Recent content on weigege&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 09 Mar 2020 19:17:37 +0800</lastBuildDate>
     
 	<atom:link href="https://liwei20001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>test</title>
+      <link>https://liwei20001.github.io/post/test/</link>
+      <pubDate>Mon, 09 Mar 2020 19:17:37 +0800</pubDate>
+      
+      <guid>https://liwei20001.github.io/post/test/</guid>
+      <description>原创力资料网下载器 (v1.0) # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;爬取原创力资料网的资料&amp;#34;&amp;#34;&amp;#34; # todo 此程序只实现了抓取pdf、doc、docx等以图片形式预览的文档， PPT格式的文档可用selenium截图 import requests import os from bs4 import BeautifulSoup import re import threading class zip118_spider(threading.Thread): def __init__(self, p): super(zip118_spider, self).__init__() &amp;#34;&amp;#34;&amp;#34;通过文档的cid和p_aid来下载文档&amp;#34;&amp;#34;&amp;#34; self.session = requests.session() self.headers = { &amp;#39;Host&amp;#39;: &amp;#39;www.zip118.com&amp;#39;, &amp;#39;Connection&amp;#39;: &amp;#39;keep-alive&amp;#39;, &amp;#39;Accept&amp;#39;: &amp;#39;application / json, text / javascript, * / *; q = 0.01&amp;#39;, &amp;#39;Sec-Fetch-Dest&amp;#39;: &amp;#39;empty&amp;#39;, &amp;#39;X-Requested-With&amp;#39;: &amp;#39;XMLHttpRequest&amp;#39;, &amp;#39;User-Agent&amp;#39;: &amp;#39;Mozilla / 5.0(WindowsNT10.0;Win64;x64) AppleWebKit /\ 537.36(KHTML, likeGecko) Chrome / 80.0.3987.122Safari / 537.</description>
+    </item>
     
   </channel>
 </rss>
