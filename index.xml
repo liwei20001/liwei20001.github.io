@@ -6,10 +6,19 @@
     <description>Recent content on weigege&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Mar 2020 16:50:52 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2020 00:13:39 +0800</lastBuildDate>
     
 	<atom:link href="https://liwei20001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SRTP_log_day2</title>
+      <link>https://liwei20001.github.io/post/srtplogday2/</link>
+      <pubDate>Wed, 11 Mar 2020 00:13:39 +0800</pubDate>
+      
+      <guid>https://liwei20001.github.io/post/srtplogday2/</guid>
+      <description>单线程下imu的采样频率 # -*- coding: utf-8 -*- import serial import numpy as np import time from kcf import KCFTracker import cv2 def imu_init(port): &amp;#34;&amp;#34;&amp;#34;连接imu，递归&amp;#34;&amp;#34;&amp;#34; try: return serial.Serial(port, 115200, timeout=1, parity=serial.PARITY_EVEN, rtscts=1) except : print(&amp;#39;连接失败，尝试重新连接！&amp;#39;) return imu_init(port) def bytestoshort(d1, d2): &amp;#34;&amp;#34;&amp;#34;将两个八位的二进制数转化为16位的二进制数&amp;#34;&amp;#34;&amp;#34; d = d1 * 256 + d2 if d &amp;gt; 32767: d -= 65536 return d class imu_read: &amp;#34;&amp;#34;&amp;#34;读取imu的数据A为加速度，w为角速度，a为欧拉角&amp;#34;&amp;#34;&amp;#34; def __init__(self): self.imu = imu_init(&amp;#39;COM4&amp;#39;) self.imu.write(b&amp;#39;\xFF\xAA\x52&amp;#39;) # z轴角度归零 self.A = [0] * 3 def read_A_w_a(self): while True: data = self.</description>
+    </item>
     
     <item>
       <title>SRTP_log_day1</title>
