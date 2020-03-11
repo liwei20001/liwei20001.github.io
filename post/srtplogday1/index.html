@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>SRTP_log_day1 // weigege&#39;s Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="liwei" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://liwei20001.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SRTP_log_day1"/>
+<meta name="twitter:description" content="项目题目：可穿戴式运动跟踪及轨迹可视化系统  项目使用EKF对视觉和imu的数据进行融合 迭代公式 融合步骤  采用多进程进行融合, 分别分配一个进程用于采集视觉的数据, 一个进程用于采集imu的数据, 一个进程用于融合, 一个进程用于画图, 读取imu的加速度, 积分后再通过传感器测量得到的角度进行坐标变换得到世界坐标系下目标的速度 融合前, 进行初始化, 得到imu二次积分得到的距离, 同样积分得到视觉的移动距离, 两者相除得到坐标尺度 imu的采样频率为100HZ, 视觉的采样频率为25HZ, 为减小imu的视觉误差, 采用预积分的方法处理加速度数据, 再利用EKF迭代公式进行迭代. 将imu和vision的读取的数据分别放在一个列表容器里, 进入候选状态, 数据融合的程序中检测vision的数据是否为空, 当vision的数据为非空且imu的长度大于等于4时, 将imu读取到的数据进行预积分处理后, 进行融合, 由于迭代速度很快, 预计延迟不会太大   待解决问题 imu的角度测得的是载体坐标下的角度, imu初始的载体坐标系必须与世界坐标系完全重合才能使得到的速度与imu的坐标系一致"/>
+
+    <meta property="og:title" content="SRTP_log_day1" />
+<meta property="og:description" content="项目题目：可穿戴式运动跟踪及轨迹可视化系统  项目使用EKF对视觉和imu的数据进行融合 迭代公式 融合步骤  采用多进程进行融合, 分别分配一个进程用于采集视觉的数据, 一个进程用于采集imu的数据, 一个进程用于融合, 一个进程用于画图, 读取imu的加速度, 积分后再通过传感器测量得到的角度进行坐标变换得到世界坐标系下目标的速度 融合前, 进行初始化, 得到imu二次积分得到的距离, 同样积分得到视觉的移动距离, 两者相除得到坐标尺度 imu的采样频率为100HZ, 视觉的采样频率为25HZ, 为减小imu的视觉误差, 采用预积分的方法处理加速度数据, 再利用EKF迭代公式进行迭代. 将imu和vision的读取的数据分别放在一个列表容器里, 进入候选状态, 数据融合的程序中检测vision的数据是否为空, 当vision的数据为非空且imu的长度大于等于4时, 将imu读取到的数据进行预积分处理后, 进行融合, 由于迭代速度很快, 预计延迟不会太大   待解决问题 imu的角度测得的是载体坐标下的角度, imu初始的载体坐标系必须与世界坐标系完全重合才能使得到的速度与imu的坐标系一致" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://liwei20001.github.io/post/srtplogday1/" />
+<meta property="article:published_time" content="2020-03-10T16:50:52+08:00" />
+<meta property="article:modified_time" content="2020-03-10T16:50:52+08:00" />
+
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://liwei20001.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="liwei" /></a>
+      <h1>weigege&#39;s Blog</h1>
+      <p>Life is short, I choose Python!</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/liwei20001/" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">SRTP_log_day1</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 10, 2020
+        </div><div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+          <a class="tag" href="https://liwei20001.github.io/tags/srtp/">SRTP</a><a class="tag" href="https://liwei20001.github.io/tags/imu/">imu</a><a class="tag" href="https://liwei20001.github.io/tags/%E8%A7%86%E8%A7%89/">视觉</a><a class="tag" href="https://liwei20001.github.io/tags/%E8%9E%8D%E5%90%88/">融合</a></div></div>
+    </header>
+    <div class="post-content">
+      <h2 id="项目题目可穿戴式运动跟踪及轨迹可视化系统">项目题目：可穿戴式运动跟踪及轨迹可视化系统</h2>
+<hr>
+<h3 id="项目使用ekf对视觉和imu的数据进行融合">项目使用EKF对视觉和imu的数据进行融合</h3>
+<h4 id="迭代公式">迭代公式</h4>
+<p><img src="https://liwei20001.github.io/SRTP/%E8%BF%AD%E4%BB%A3%E5%85%AC%E5%BC%8F.png" alt="迭代公式"></p>
+<h4 id="融合步骤">融合步骤</h4>
+<ol>
+<li>采用多进程进行融合, 分别分配一个进程用于采集视觉的数据, 一个进程用于采集imu的数据, 一个进程用于融合, 一个进程用于画图, <strong>读取imu的加速度, 积分后再通过传感器测量得到的角度进行坐标变换得到世界坐标系下目标的速度</strong></li>
+<li>融合前, 进行初始化, 得到imu二次积分得到的距离, 同样积分得到视觉的移动距离, 两者相除得到坐标尺度</li>
+<li>imu的采样频率为<strong>100HZ</strong>, 视觉的采样频率为<strong>25HZ</strong>, 为减小imu的视觉误差, 采用<strong>预积分</strong>的方法处理加速度数据, 再利用EKF迭代公式进行迭代.</li>
+<li>将imu和vision的读取的数据分别放在一个列表容器里, 进入候选状态, 数据融合的程序中检测vision的数据是否为空, 当vision的数据为非空且imu的长度大于等于4时, 将imu读取到的数据进行<strong>预积分处理</strong>后, 进行融合, 由于迭代速度很快, 预计延迟不会太大</li>
+</ol>
+<hr>
+<h4 id="待解决问题">待解决问题</h4>
+<p><strong>imu的角度测得的是载体坐标下的角度, imu初始的载体坐标系必须与世界坐标系完全重合才能使得到的速度与imu的坐标系一致</strong></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
