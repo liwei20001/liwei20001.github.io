@@ -6,7 +6,7 @@
     <description>Recent content in Tags on weigege&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Mar 2020 00:13:39 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 11:28:10 +0800</lastBuildDate>
     
 	<atom:link href="https://liwei20001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>imu</title>
       <link>https://liwei20001.github.io/tags/imu/</link>
-      <pubDate>Wed, 11 Mar 2020 00:13:39 +0800</pubDate>
+      <pubDate>Thu, 12 Mar 2020 11:28:10 +0800</pubDate>
       
       <guid>https://liwei20001.github.io/tags/imu/</guid>
       <description></description>
@@ -23,9 +23,27 @@
     <item>
       <title>SRTP</title>
       <link>https://liwei20001.github.io/tags/srtp/</link>
-      <pubDate>Wed, 11 Mar 2020 00:13:39 +0800</pubDate>
+      <pubDate>Thu, 12 Mar 2020 11:28:10 +0800</pubDate>
       
       <guid>https://liwei20001.github.io/tags/srtp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>多进程</title>
+      <link>https://liwei20001.github.io/tags/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Thu, 12 Mar 2020 11:28:10 +0800</pubDate>
+      
+      <guid>https://liwei20001.github.io/tags/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>视觉</title>
+      <link>https://liwei20001.github.io/tags/%E8%A7%86%E8%A7%89/</link>
+      <pubDate>Thu, 12 Mar 2020 11:28:10 +0800</pubDate>
+      
+      <guid>https://liwei20001.github.io/tags/%E8%A7%86%E8%A7%89/</guid>
       <description></description>
     </item>
     
@@ -35,15 +53,6 @@
       <pubDate>Wed, 11 Mar 2020 00:13:39 +0800</pubDate>
       
       <guid>https://liwei20001.github.io/tags/%E8%9E%8D%E5%90%88/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>视觉</title>
-      <link>https://liwei20001.github.io/tags/%E8%A7%86%E8%A7%89/</link>
-      <pubDate>Wed, 11 Mar 2020 00:13:39 +0800</pubDate>
-      
-      <guid>https://liwei20001.github.io/tags/%E8%A7%86%E8%A7%89/</guid>
       <description></description>
     </item>
     
