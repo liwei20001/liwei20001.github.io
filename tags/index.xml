@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on weigege&#39;s Blog</title>
+    <title>Tags on Weigege&#39;s Blog</title>
     <link>https://liwei20001.github.io/tags/</link>
-    <description>Recent content in Tags on weigege&#39;s Blog</description>
+    <description>Recent content in Tags on Weigege&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2020 11:28:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 10:40:48 +0800</lastBuildDate>
     
 	<atom:link href="https://liwei20001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>imu</title>
       <link>https://liwei20001.github.io/tags/imu/</link>
-      <pubDate>Thu, 12 Mar 2020 11:28:10 +0800</pubDate>
+      <pubDate>Sun, 22 Mar 2020 10:40:48 +0800</pubDate>
       
       <guid>https://liwei20001.github.io/tags/imu/</guid>
       <description></description>
@@ -23,9 +23,18 @@
     <item>
       <title>SRTP</title>
       <link>https://liwei20001.github.io/tags/srtp/</link>
-      <pubDate>Thu, 12 Mar 2020 11:28:10 +0800</pubDate>
+      <pubDate>Sun, 22 Mar 2020 10:40:48 +0800</pubDate>
       
       <guid>https://liwei20001.github.io/tags/srtp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>积分</title>
+      <link>https://liwei20001.github.io/tags/%E7%A7%AF%E5%88%86/</link>
+      <pubDate>Sun, 22 Mar 2020 10:40:48 +0800</pubDate>
+      
+      <guid>https://liwei20001.github.io/tags/%E7%A7%AF%E5%88%86/</guid>
       <description></description>
     </item>
     
