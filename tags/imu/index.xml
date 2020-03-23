@@ -17,7 +17,7 @@
       <pubDate>Sun, 22 Mar 2020 10:40:48 +0800</pubDate>
       
       <guid>https://liwei20001.github.io/post/srtpday4/</guid>
-      <description>imu积分   matplotlib必须放在主函数中执行, 不能分配线程 imu初始化标定后, 需要重启imu才会生效  self.imu = imu_init(&amp;#39;COM4&amp;#39;) # 默认串口为COM4 self.imu.write(b&amp;#39;\xFF\xAA\x52&amp;#39;) # z轴角度归零 self.imu.write(b&amp;#39;\xFF\xAA\x67&amp;#39;) # x, y轴角度归零 self.imu.close() self.imu = imu_init(&amp;#39;COM4&amp;#39;)  在积分的时候发现一个问题， 引用的对象会跟着原对象一起改变   对象的引用与对象的拷贝：
+      <description>imu积分   matplotlib必须放在主函数中执行, 不能分配线程 imu初始化标定后, 需要重启imu才会生效  self.imu = imu_init(&amp;#39;COM4&amp;#39;) # 默认串口COM4 self.imu.write(b&amp;#39;\xFF\xAA\x52&amp;#39;) # z轴角度归零 self.imu.write(b&amp;#39;\xFF\xAA\x67&amp;#39;) # x, y轴角度归零 self.imu.close() self.imu = imu_init(&amp;#39;COM4&amp;#39;)  在积分的时候发现一个问题， 引用的对象会跟着原对象一起改变   对象的引用与对象的拷贝：
  引用： 对于可变对象例如列表array等对象，由于指向相同的内存地址， 改变任一对象的值都会导致该内存地址的值改变 拷贝 copy.deepcopy() 原对象与被拷贝对象指向不同的内存地址， 互不影响   梯形积分得到速度，以及路程  积分前减去重力加速度 np.trapz(y, x) 使用梯形公式进行离散积分  self.velocity = [0] * (len(acc) - 1) # 预先分配内存空间 self.dist = [0] * (len(acc) - 2) for i in range(1, len(acc)): # 积分得到速度 self.</description>
     </item>
     
