@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Weigege&#39;s Blog</title>
+    <link>https://liwei20001.github.io/tags/python/</link>
+    <description>Recent content in Python on Weigege&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Mar 2020 14:05:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://liwei20001.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python中对象的拷贝与应用</title>
+      <link>https://liwei20001.github.io/post/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%B7%E8%B4%9D%E4%B8%8E%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Wed, 25 Mar 2020 14:05:04 +0800</pubDate>
+      
+      <guid>https://liwei20001.github.io/post/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%B7%E8%B4%9D%E4%B8%8E%E5%BA%94%E7%94%A8/</guid>
+      <description>基本数据对象的拷贝与引用 python中的一切皆为对象, object_2 = object_1 完成对对象的引用
+object_2 = copy.deepcopy(object_1) 完成对对象的拷贝
+# 两个对象的内存地址相同 In [2]: A = 1 In [3]: B = A In [4]: id(B) == id(A) Out[4]: True # 两个不同的变量, 内存地址也相同 In [51]: A = 1 In [52]: B = copy.deepcopy(A) In [53]: id(A) == id(B) Out[53]: True 对于基本数据类型的变量, 例如int类型的数据, 字符串, bool类型的数据等, 相同的数据占据同一个内存地址, 即使两个变量位于同一内存地址,但是对任意一个对象改变依然不影响其他位于该地址的变量
+# 值相同, 不同的变量位于同一内存地址 In [46]: A = 1 In [47]: B = 1 In [48]: id(A) == id(B) Out[48]: True 相同值的float类型的数据, 不在同一内存地址.</description>
+    </item>
+    
+  </channel>
+</rss>
